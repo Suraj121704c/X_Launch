@@ -7,17 +7,30 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {styles} from './styles';
 import {back, search, shutdown} from '../../../utils/images';
+import {useNavigation} from '@react-navigation/native';
+import {Route} from '../../../navigation/constants';
+import {useDispatch, useSelector} from 'react-redux';
+import {launchAction} from '../../../redux/actions/launchaction';
+import {Lodaer} from '../../../components/Loader';
 
 const Launch = () => {
+  const {data, isLoading} = useSelector((state: any) => state.launch);
+  const dispatch = useDispatch<any>();
+
+  console.log(data, isLoading);
+
+  useEffect(() => {
+    dispatch(launchAction());
+  }, []);
+
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#000'}}>
+      <Lodaer visible={isLoading} />
       <View style={styles.header}>
-        <TouchableOpacity>
-          <Image source={back} style={styles.back} />
-        </TouchableOpacity>
+        <TouchableOpacity></TouchableOpacity>
         <Text style={styles.headerText}>Launch Details</Text>
         <TouchableOpacity>
           <Image source={shutdown} style={styles.log} />

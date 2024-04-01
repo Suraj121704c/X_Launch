@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
 
   log: {
     height:hp(4),
-    width:wp(8.4)
+    width:wp(8.5)
   },
   searchContainer: {
     flexDirection: 'row',
