@@ -139,7 +139,7 @@ const SignUp = () => {
             <Text style={styles.buttonTextStyle}>REGISTER</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate(Route.Login)}>
-            <Text style={styles.registerTextStyle}>Go back ? Login</Text>
+            <Text style={styles.registerTextStyle}>Go back ?</Text>
           </TouchableOpacity>
         </KeyboardAvoidingView>
       </ScrollView>

@@ -11,7 +11,7 @@ import {
 } from '../types';
 
 const initialState = {
-  isLoggedIn: false,
+  isLoggedIn: true,
   isLoading: false,
   isError: false,
 };

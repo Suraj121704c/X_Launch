@@ -1,8 +1,9 @@
 export const Route = {
   // Before Login Screen
   Login: 'Login',
-  SignUp : "SignUp",
+  SignUp: 'SignUp',
 
   //After Login Screen
   HomePage: 'Homepage',
+  Launch: 'Launch',
 };
