@@ -1,79 +1,51 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# X_Launch App
 
-# Getting Started
+## Introduction
+X_Launch is a mobile application designed to provide users with information about space launches. It offers comprehensive details about upcoming and past space missions, including mission names, launch dates, launch sites, and more.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Installation
+The X_Launch app is available for download on both iOS and Android devices. As it is a demo app you need to run pod install for ios and yarn or npm install or downloading dependencies and to run you need x code for ios and android studio for android or just simply run in debug by cmd npm start in root folder and run on android or ios as per your preferance.
 
-## Step 1: Start the Metro Server
+## Usage
+Upon launching the app, users can browse through a list of upcoming and past space launches. They can search for specific missions using the search functionality and filter launches based on various criteria.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
+- Up-to-date information on space launches
+- Search functionality to find specific missions
+- Filter launches by status (successful or failed)
+- Filter by year
+- User-friendly interface for easy navigation
+- Login and Singup Functionality
+- Loder as per the api hit and get response data.
+- Validation also added
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## User Interface
+The app boasts a clean and intuitive user interface, making it easy for users to access information about space launches. The layout is well-organized, with clear labels and navigation buttons.
 
-```bash
-# using npm
-npm start
+## Performance
+Overall, the xLaunch app performs well in terms of speed and responsiveness. However, occasional lags may occur when loading large amounts of data or images.
 
-# OR using Yarn
-yarn start
-```
+## Pros and Cons
+### Pros
+- Comprehensive information on space launches
+- Intuitive user interface
+- Useful search and filter functionalities
 
-## Step 2: Start your Application
+### Cons
+- Occasional performance issues
+- Limited advanced features
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Conclusion
+xLaunch is a handy app for space enthusiasts who want to stay updated on upcoming and past space missions. While it offers valuable information and a user-friendly interface, there is room for improvement in terms of performance and additional features.
+![WhatsApp Image 2024-04-02 at 10 05 12_343759e5](https://github.com/Suraj121704c/X_Launch/assets/112753795/68265176-c0d7-40d0-9bfa-109baa4b7f41)
 
-### For Android
+## Images
+![WhatsApp Image 2024-04-02 at 10 05 12_343759e5](https://github.com/Suraj121704c/X_Launch/assets/112753795/47538578-f091-4947-a78b-6ed9988f7f82)
 
-```bash
-# using npm
-npm run android
 
-# OR using Yarn
-yarn android
-```
+![WhatsApp Image 2024-04-02 at 10 01 56_c8c3ff04](https://github.com/Suraj121704c/X_Launch/assets/112753795/e9b826f2-ab45-4501-967f-a27d189ccbad)
 
-### For iOS
 
-```bash
-# using npm
-npm run ios
+![WhatsApp Image 2024-04-02 at 10 01 57_53380d85](https://github.com/Suraj121704c/X_Launch/assets/112753795/cd69d633-0ce4-4da1-aaed-281a5f35e84f)
 
-# OR using Yarn
-yarn ios
-```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
