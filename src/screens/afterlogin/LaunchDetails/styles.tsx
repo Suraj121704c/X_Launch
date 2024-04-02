@@ -155,7 +155,6 @@ export const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    alignItems: 'center',
   },
 
   headerText2: {

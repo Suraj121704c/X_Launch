@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   Animated,
+  ScrollView,
 } from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
 import {styles} from './styles';
@@ -24,6 +25,7 @@ import {
 } from '../../../redux/actions/launchaction';
 import {Lodaer} from '../../../components/Loader';
 import {logoutAction} from '../../../redux/actions/loginaction';
+import {months} from '../../../utils/data';
 
 const Launch = () => {
   const {data, isLoading} = useSelector((state: any) => state.launch);
@@ -131,63 +133,22 @@ const Launch = () => {
           </TouchableOpacity>
         </View>
         {showYear && (
-          <View style={styles.monthsView2}>
-            <TouchableOpacity
-              onPress={() => {
-                setShowYear(false);
-                handleYearAction(2014);
-              }}>
-              <Text style={styles.headerText2}>2014</Text>
-            </TouchableOpacity>
-            <View style={styles.separator2} />
-            <TouchableOpacity
-              onPress={() => {
-                setShowYear(false);
-                handleYearAction(2015);
-              }}>
-              <Text style={styles.headerText2}>2015</Text>
-            </TouchableOpacity>
-            <View style={styles.separator2} />
-            <TouchableOpacity
-              onPress={() => {
-                setShowYear(false);
-                handleYearAction(2016);
-              }}>
-              <Text style={styles.headerText2}>2016</Text>
-            </TouchableOpacity>
-            <View style={styles.separator2} />
-            <TouchableOpacity
-              onPress={() => {
-                setShowYear(false);
-                handleYearAction(2017);
-              }}>
-              <Text style={styles.headerText2}>2017</Text>
-            </TouchableOpacity>
-            <View style={styles.separator2} />
-            <TouchableOpacity
-              onPress={() => {
-                setShowYear(false);
-                handleYearAction(2018);
-              }}>
-              <Text style={styles.headerText2}>2018</Text>
-            </TouchableOpacity>
-            <View style={styles.separator2} />
-            <TouchableOpacity
-              onPress={() => {
-                setShowYear(false);
-                handleYearAction(2019);
-              }}>
-              <Text style={styles.headerText2}>2019</Text>
-            </TouchableOpacity>
-            <View style={styles.separator2} />
-            <TouchableOpacity
-              onPress={() => {
-                setShowYear(false);
-                handleYearAction(2020);
-              }}>
-              <Text style={styles.headerText2}>2020</Text>
-            </TouchableOpacity>
-          </View>
+          <ScrollView
+            style={styles.monthsView2}
+            contentContainerStyle={{alignItems: 'center'}}>
+            {months.map((e, i) => (
+              <>
+                <TouchableOpacity
+                  onPress={() => {
+                    setShowYear(false);
+                    handleYearAction(e?.year);
+                  }}>
+                  <Text style={styles.headerText2}>{e?.year}</Text>
+                </TouchableOpacity>
+                <View style={styles.separator2} />
+              </>
+            ))}
+          </ScrollView>
         )}
       </View>
 

@@ -1,0 +1,17 @@
+export const months = [
+  {id: 1, year: 2006},
+  {id: 1, year: 2007},
+  {id: 1, year: 2008},
+  {id: 1, year: 2009},
+  {id: 1, year: 2010},
+  {id: 1, year: 2011},
+  {id: 1, year: 2012},
+  {id: 1, year: 2013},
+  {id: 1, year: 2014},
+  {id: 1, year: 2015},
+  {id: 1, year: 2016},
+  {id: 1, year: 2017},
+  {id: 1, year: 2018},
+  {id: 1, year: 2019},
+  {id: 1, year: 2020},
+];
