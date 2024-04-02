@@ -12,7 +12,7 @@ export const launchAction = (
     });
     try {
       let url = launch_baseUrl;
-      let isFirstParam = true; // Flag to track if it's the first parameter
+      let isFirstParam = true;
       if (missionName) {
         url += `?mission_name=${missionName}`;
         isFirstParam = false;

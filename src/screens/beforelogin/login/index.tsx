@@ -18,8 +18,15 @@ import {logo} from '../../../utils/images';
 import {styles} from './styles';
 import {Route} from '../../../navigation/constants';
 import {loginValidation} from '../../../validation/loginValidation';
+import {useDispatch, useSelector} from 'react-redux';
+import {loginAction} from '../../../redux/actions/loginaction';
+import {Lodaer} from '../../../components/Loader';
 
 const LoginScreen = () => {
+  const {isLoggedIn, isLoading, isError} = useSelector(
+    (state: any) => state.auth,
+  );
+  const dispatch = useDispatch<any>();
   const [textFields, setTextFields] = useState<any>({
     email: '',
     password: '',
@@ -44,7 +51,9 @@ const LoginScreen = () => {
         email: '',
         password: '',
       });
-      console.log('loggedIn');
+      dispatch(loginAction(textFields)).then(() => {
+        navigation.navigate(Route.HomePage);
+      });
     } else {
       setValidationError(validation);
     }
@@ -52,7 +61,7 @@ const LoginScreen = () => {
 
   return (
     <SafeAreaView style={styles.mainBody}>
-      {/* <Loader loading={loading} /> */}
+      <Lodaer visible={isLoading} />
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{

@@ -21,8 +21,11 @@ import {logo} from '../../../utils/images';
 import {useNavigation} from '@react-navigation/native';
 import {Route} from '../../../navigation/constants';
 import {registerValidation} from '../../../validation/register';
+import {registerAction} from '../../../redux/actions/loginaction';
+import {useDispatch} from 'react-redux';
 
 const SignUp = () => {
+  const dispatch = useDispatch<any>();
   const [textFields, setTextFields] = useState<any>({
     name: '',
     email: '',
@@ -46,12 +49,14 @@ const SignUp = () => {
   const register = () => {
     const validation = registerValidation(textFields);
     if (validation === true) {
-      console.log('registered');
       setValidationError({
         name: '',
         email: '',
         password: '',
       });
+      dispatch(registerAction(textFields)).then(() =>
+        navigation.navigate(Route.HomePage),
+      );
     } else {
       setValidationError(validation);
     }
@@ -164,7 +169,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     margin: hp(3),
   },
-  
+
   buttonStyle: {
     backgroundColor: '#7DE24E',
     borderWidth: 0,
