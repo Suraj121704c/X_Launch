@@ -17,13 +17,33 @@ export const styles = StyleSheet.create({
     fontSize: hp(2.8),
   },
   back: {
-    height:hp(4),
-    width:wp(5)
+    height: hp(4),
+    width: wp(5),
+  },
+
+  checkIamgeView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderWidth: wp(1),
+    borderColor: 'green',
+    padding: wp(2),
+  },
+
+  checkimage: {
+    height: hp(4),
+    width: wp(6.5),
+    marginHorizontal: wp(2),
+  },
+
+  topbar: {
+    marginHorizontal: wp(5),
+    marginBottom: hp(1.5),
   },
 
   log: {
-    height:hp(4),
-    width:wp(8.5)
+    height: hp(4),
+    width: wp(8.5),
   },
   searchContainer: {
     flexDirection: 'row',
@@ -64,21 +84,20 @@ export const styles = StyleSheet.create({
   },
   hashView: {
     marginHorizontal: wp(8),
-    flexDirection:"row",
-    justifyContent:"space-between",
-    alignItems : "center",
-    width : wp(85)
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: wp(85),
   },
 
   hashView2: {
     marginHorizontal: wp(8),
-    flexDirection:"row",
-    justifyContent:"space-between",
-    alignItems : "center",
-    width : wp(85),
-    marginTop : hp(2)
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: wp(85),
+    marginTop: hp(2),
   },
-
 
   imagestyles: {
     height: hp(5.05),
@@ -90,5 +109,55 @@ export const styles = StyleSheet.create({
     backgroundColor: '#e6e6e6',
     marginTop: hp(1.5),
     width: wp(100),
+  },
+  separator2: {
+    height: 1,
+    backgroundColor: '#000',
+    marginTop: hp(1.5),
+    width: wp(90),
+  },
+
+  monthsView: {
+    position: 'absolute',
+    backgroundColor: '#fff',
+    height: hp(14.5),
+    zIndex: 1,
+    paddingVertical: hp(1.5),
+    paddingHorizontal: wp(5),
+    width: wp(90),
+    borderRadius: wp(2),
+    right: wp(0),
+    top: hp(6),
+    shadowColor: 'red',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    alignItems:'center'
+  },
+
+  monthsView2:{
+    position: 'absolute',
+    backgroundColor: '#fff',
+    height: hp(46),
+    zIndex: 1,
+    paddingVertical: hp(1.5),
+    paddingHorizontal: wp(5),
+    width: wp(90),
+    borderRadius: wp(2),
+    right: wp(0),
+    top: hp(6),
+    shadowColor: 'red',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    alignItems:'center'
+  },
+
+  headerText2: {
+    color: '#000',
+    fontSize: hp(2.8),
+    marginTop:hp(1)
   },
 });
