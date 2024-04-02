@@ -27,7 +27,7 @@ export const launchAction = (
       fetch(url)
         .then(res => res.json())
         .then(res => {
-          console.log(res);
+          // console.log(res);
           dispatch({
             type: LAUNCH_SUCCESS,
             payload: res,

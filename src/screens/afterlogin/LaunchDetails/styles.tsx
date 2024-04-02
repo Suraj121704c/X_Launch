@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
     color: '#000',
   },
   numberListView: {
-    marginTop: hp(2),
+    marginTop: hp(2.5),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
   },
   numberText: {
     fontSize: hp(2.3),
-    color: '#000',
+    color: '#ffff',
     fontWeight: '500',
   },
   numberText2: {
@@ -64,9 +64,21 @@ export const styles = StyleSheet.create({
   },
   hashView: {
     marginHorizontal: wp(8),
-    backgroundColor: 'red',
-    borderRadius: wp(9),
+    flexDirection:"row",
+    justifyContent:"space-between",
+    alignItems : "center",
+    width : wp(85)
   },
+
+  hashView2: {
+    marginHorizontal: wp(8),
+    flexDirection:"row",
+    justifyContent:"space-between",
+    alignItems : "center",
+    width : wp(85),
+    marginTop : hp(2)
+  },
+
 
   imagestyles: {
     height: hp(5.05),

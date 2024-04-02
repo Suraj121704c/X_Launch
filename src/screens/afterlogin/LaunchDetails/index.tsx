@@ -20,8 +20,6 @@ const Launch = () => {
   const {data, isLoading} = useSelector((state: any) => state.launch);
   const dispatch = useDispatch<any>();
 
-  console.log(data, isLoading);
-
   useEffect(() => {
     dispatch(launchAction());
   }, []);
@@ -46,26 +44,39 @@ const Launch = () => {
           placeholderTextColor="#888"
         />
       </View>
+      <FlatList
+        data={data}
+        renderItem={({item, index}) => (
+          <View style={styles.numberListView}>
+            <View>
+              <View style={styles.hashView}>
+                <Image
+                  source={{uri: item?.links?.mission_patch}}
+                  style={styles.imagestyles}
+                />
+                <Text style={styles.numberText}>{item?.mission_name}</Text>
+              </View>
+              <View style={styles.hashView2}>
+                <Text style={styles.numberText}>
+                  Site : {item?.launch_site?.site_name}
+                </Text>
+                <Text style={styles.numberText}>
+                  Rocket : {item?.rocket?.rocket_name}
+                </Text>
+              </View>
+              <View style={styles.hashView2}>
+                <Text style={styles.numberText}>
+                  Date : {item?.launch_date_local}
+                </Text>
+              </View>
+            </View>
+          </View>
+        )}
+        keyExtractor={(item, index) => index.toString()}
+        ItemSeparatorComponent={() => <View style={styles.separator} />}
+      />
     </SafeAreaView>
   );
 };
 
 export default Launch;
-
-{
-  /* <FlatList
-  data={Phone_data}
-  renderItem={({item}) => (
-    <View style={styles.numberListView}>
-      <View style={styles.hashView}>
-        <Image source={user_png} style={styles.imagestyles} />
-      </View>
-      <View>
-        <Text style={styles.numberText}>{item.number}</Text>
-      </View>
-    </View>
-  )}
-  keyExtractor={item => item.id}
-  ItemSeparatorComponent={() => <View style={styles.separator} />}
-/>; */
-}
