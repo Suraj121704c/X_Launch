@@ -25,8 +25,9 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderWidth: wp(1),
-    borderColor: 'green',
+    borderWidth: wp(0.5),
+    borderColor: '#fff',
+    borderRadius: wp(2),
     padding: wp(2),
   },
 
@@ -67,23 +68,26 @@ export const styles = StyleSheet.create({
   },
   numberListView: {
     marginTop: hp(2.5),
-    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    marginVertical: hp(0.5),
+    padding: wp(5),
+    borderWidth: wp(0.5),
+    borderColor: '#fff',
+    borderRadius: wp(3),
+    width : wp(95),
+    marginLeft : wp(3)
   },
   numberText: {
-    fontSize: hp(2.3),
+    fontSize: hp(2.1),
     color: '#ffff',
     fontWeight: '500',
   },
+
   numberText2: {
-    fontSize: hp(2.8),
+    fontSize: hp(2),
     color: '#b30000',
     fontWeight: '500',
   },
   hashView: {
-    marginHorizontal: wp(8),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -91,12 +95,11 @@ export const styles = StyleSheet.create({
   },
 
   hashView2: {
-    marginHorizontal: wp(8),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: wp(85),
-    marginTop: hp(2),
+    marginTop: hp(1),
   },
 
   imagestyles: {
@@ -133,10 +136,10 @@ export const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    alignItems:'center'
+    alignItems: 'center',
   },
 
-  monthsView2:{
+  monthsView2: {
     position: 'absolute',
     backgroundColor: '#fff',
     height: hp(46),
@@ -152,12 +155,12 @@ export const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    alignItems:'center'
+    alignItems: 'center',
   },
 
   headerText2: {
     color: '#000',
     fontSize: hp(2.8),
-    marginTop:hp(1)
+    marginTop: hp(1),
   },
 });

@@ -34,7 +34,7 @@ const Launch = () => {
   const [showStatus, setShowStatus] = useState(false);
   const [showYear, setShowYear] = useState(false);
   const scrollY = useRef(new Animated.Value(0)).current;
-  const navigation = useNavigation<any>()
+  const navigation = useNavigation<any>();
 
   useEffect(() => {
     dispatch(launchAction());
@@ -53,7 +53,7 @@ const Launch = () => {
   };
 
   const logout = () => {
-    dispatch(logoutAction())
+    dispatch(logoutAction());
   };
 
   const openStaus = () => {
@@ -195,43 +195,39 @@ const Launch = () => {
         data={data}
         renderItem={({item, index}) => (
           <View style={styles.numberListView}>
-            <View>
-              <View style={styles.hashView}>
-                <Image
-                  source={{uri: item?.links?.mission_patch}}
-                  style={styles.imagestyles}
-                />
-                <Text style={styles.numberText}>{item?.mission_name}</Text>
-              </View>
-              <View style={styles.hashView2}>
-                <Text style={styles.numberText}>
-                  Site : {item?.launch_site?.site_name}
-                </Text>
-                <Text style={styles.numberText}>
-                  Rocket : {item?.rocket?.rocket_name}
-                </Text>
-              </View>
-              <View style={styles.hashView2}>
-                <Text style={styles.numberText}>
-                  Date : {item?.launch_date_local}
-                </Text>
-              </View>
-              <View style={styles.hashView2}>
-                <Text style={styles.numberText}>
-                  Launch Status :
-                  {item?.launch_success ? ' Successfull' : ' Failed'}
-                </Text>
-              </View>
-              <View style={styles.hashView2}>
-                <Text style={styles.numberText}>
-                  Year : {item?.launch_year}
-                </Text>
-              </View>
+            <View style={styles.hashView}>
+              <Image
+                source={{uri: item?.links?.mission_patch}}
+                style={styles.imagestyles}
+              />
+              <Text style={styles.numberText}>{item?.mission_name}</Text>
+            </View>
+            <View style={styles.hashView2}>
+              <Text style={styles.numberText}>
+                Site : {item?.launch_site?.site_name}
+              </Text>
+              <Text style={styles.numberText}>
+                Rocket : {item?.rocket?.rocket_name}
+              </Text>
+            </View>
+            <View style={styles.hashView2}>
+              <Text style={styles.numberText}>
+                Date : {item?.launch_date_local}
+              </Text>
+            </View>
+            <View style={styles.hashView2}>
+              <Text style={styles.numberText}>
+                Launch Status :
+                {item?.launch_success ? ' Successfull' : ' Failed'}
+              </Text>
+            </View>
+            <View style={styles.hashView2}>
+              <Text style={styles.numberText}>Year : {item?.launch_year}</Text>
             </View>
           </View>
         )}
         keyExtractor={(item, index) => index.toString()}
-        ItemSeparatorComponent={() => <View style={styles.separator} />}
+        // ItemSeparatorComponent={() => <View style={styles.separator} />}
         // onScroll={Animated.event(
         //   [{nativeEvent: {contentOffset: {y: scrollY}}}],
         //   {useNativeDriver: true, listener: closeStatusOnScroll},
