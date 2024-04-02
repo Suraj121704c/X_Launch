@@ -11,7 +11,7 @@ const AfterLoginStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName={Route.Launch}>
+      initialRouteName={Route.HomePage}>
       <Stack.Screen name={Route.HomePage} component={Homepage} />
       <Stack.Screen name={Route.Launch} component={Launch}/>
     </Stack.Navigator>
