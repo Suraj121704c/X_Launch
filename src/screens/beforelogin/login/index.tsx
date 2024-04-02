@@ -51,9 +51,7 @@ const LoginScreen = () => {
         email: '',
         password: '',
       });
-      dispatch(loginAction(textFields)).then(() => {
-        navigation.navigate(Route.HomePage);
-      });
+      dispatch(loginAction(textFields))
     } else {
       setValidationError(validation);
     }

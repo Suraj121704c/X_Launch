@@ -44,7 +44,7 @@ export const authReducer = (state = initialState, action: any) => {
       return {
         ...state,
         isLoading: false,
-        isLoggedIn: true,
+        isLoggedIn: false,
       };
     default:
       return state;

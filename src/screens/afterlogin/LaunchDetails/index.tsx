@@ -34,6 +34,7 @@ const Launch = () => {
   const [showStatus, setShowStatus] = useState(false);
   const [showYear, setShowYear] = useState(false);
   const scrollY = useRef(new Animated.Value(0)).current;
+  const navigation = useNavigation<any>()
 
   useEffect(() => {
     dispatch(launchAction());
@@ -52,7 +53,7 @@ const Launch = () => {
   };
 
   const logout = () => {
-    dispatch(logoutAction());
+    dispatch(logoutAction())
   };
 
   const openStaus = () => {

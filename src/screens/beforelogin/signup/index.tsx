@@ -54,9 +54,7 @@ const SignUp = () => {
         email: '',
         password: '',
       });
-      dispatch(registerAction(textFields)).then(() =>
-        navigation.navigate(Route.HomePage),
-      );
+      dispatch(registerAction(textFields));
     } else {
       setValidationError(validation);
     }
